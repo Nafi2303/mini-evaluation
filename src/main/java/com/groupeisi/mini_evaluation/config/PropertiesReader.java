@@ -1,4 +1,4 @@
-package com.groupeisi.companyspringmvctiles.config;
+package com.groupeisi.mini_evaluation.config;
 
 import java.io.IOException;
 import java.io.InputStream;

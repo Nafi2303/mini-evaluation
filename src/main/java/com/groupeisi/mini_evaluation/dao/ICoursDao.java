@@ -1,4 +1,12 @@
-package com.groupeisi.mini_evaluation.services;
+package com.groupeisi.mini_evaluation.dao;
 
-public interface ICoursService {
+import com.groupeisi.mini_evaluation.entities.CoursEntity;
+
+import java.util.Optional;
+
+public interface ICoursDao extends Repository<CoursEntity> {
+
+    Optional<CoursEntity> findById(Long id);
+
+    boolean update(CoursEntity coursEntity);
 }

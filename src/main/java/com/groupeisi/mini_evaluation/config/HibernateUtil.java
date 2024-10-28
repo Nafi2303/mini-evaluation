@@ -1,11 +1,6 @@
-package com.groupeisi.companyspringmvctiles.config;
+package com.groupeisi.mini_evaluation.config;
 
-import java.util.Properties;
-
-import com.groupeisi.companyspringmvctiles.entities.AccountUserEntity;
-import com.groupeisi.companyspringmvctiles.entities.ProductEntity;
-import com.groupeisi.companyspringmvctiles.entities.Purchases;
-import com.groupeisi.companyspringmvctiles.entities.Sales;
+import com.groupeisi.mini_evaluation.entities.CoursEntity;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.AvailableSettings;
@@ -13,6 +8,8 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Properties;
 
 
 public class HibernateUtil {
@@ -45,10 +42,7 @@ public class HibernateUtil {
                 settings.put(AvailableSettings.CURRENT_SESSION_CONTEXT_CLASS, "thread");
 
                 configuration.setProperties(settings);
-                configuration.addAnnotatedClass(AccountUserEntity.class);
-                configuration.addAnnotatedClass(ProductEntity.class);
-                configuration.addAnnotatedClass(Purchases.class);
-                configuration.addAnnotatedClass(Sales.class);
+                configuration.addAnnotatedClass(CoursEntity.class);
 
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();

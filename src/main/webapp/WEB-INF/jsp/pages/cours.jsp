@@ -10,49 +10,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 <body>
-<nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Companies</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/cours">Cours</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Achats</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Vents</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Action
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-            <%--<form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>--%>
-        </div>
-    </div>
-</nav>
 <div>
+    <jsp:include page="./welcome.jsp" />
     <div class="container mt-5">
         <div class="row">
             <div class="col-sm-6">
@@ -85,25 +44,22 @@
             <div class="col-sm-6">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Ajout d'un cours</h5>
-                        <form action="/cours" method="post">
-                            <div class="mb-3">
-                                <label for="inputId" class="form-label">ID</label>
-                                <input type="text" name="id" class="form-control" id="inputId">
-                            </div>
+                        <h5 class="card-title">Ajouter un cours</h5>
+                        <form action="course" method="post">
+
                             <div class="mb-3">
                                 <label for="inputMatiere" class="form-label">Matieres</label>
                                 <input type="text" name="matiere" class="form-control" id="inputMatiere">
                             </div>
                             <div class="mb-3">
-                                <label for="inputProfesseur" class="form-label">Professeurs</label>
-                                <input type="number" name="professeur" class="form-control" id="inputProfesseur">
+                                <label for="inputProfesseur" class="form-label">Professeur</label>
+                                <input type="text" name="professeur" class="form-control" id="inputProfesseur">
                             </div>
                             <div class="mb-3">
-                                <label for="inputClasse" class="form-label">Professeurs</label>
-                                <input type="number" name="classe" class="form-control" id="inputClasse">
+                                <label for="inputClasse" class="form-label">Classe</label>
+                                <input type="text" name="classe" class="form-control" id="inputClasse">
                             </div>
-                            <button type="submit" class="btn btn-primary">Ajouter Cours</button>
+                            <button type="submit" class="btn btn-primary">Ajouter</button>
                         </form>
                     </div>
                 </div>

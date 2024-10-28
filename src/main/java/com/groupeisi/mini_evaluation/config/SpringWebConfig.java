@@ -1,4 +1,4 @@
-package com.groupeisi.companyspringmvctiles.config;
+package com.groupeisi.mini_evaluation.config;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
@@ -16,7 +16,7 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({"com.groupeisi.companyspringmvctiles.controller"})
+@ComponentScan({"com.groupeisi.mini_evaluation.controllers"})
 public class SpringWebConfig implements WebMvcConfigurer {
 
     @Override
